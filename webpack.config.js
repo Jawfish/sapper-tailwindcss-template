@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const WebpackModules = require('webpack-modules');
 const path = require('path');
 const config = require('sapper/config/webpack.js');
+const sveltePreprocess = require('svelte-preprocess')
 const pkg = require('./package.json');
 
 const mode = process.env.NODE_ENV;
@@ -17,6 +18,8 @@ const fileLoaderRule = {
 	]
 };
 
+const preprocess = sveltePreprocess({ postcss: true });
+
 module.exports = {
 	client: {
 		entry: config.client.entry(),
@@ -29,6 +32,7 @@ module.exports = {
 					use: {
 						loader: 'svelte-loader',
 						options: {
+							preprocess,
 							dev,
 							hydratable: true,
 							hotReload: false // pending https://github.com/sveltejs/svelte/issues/2377
@@ -63,6 +67,7 @@ module.exports = {
 					use: {
 						loader: 'svelte-loader',
 						options: {
+							preprocess,
 							css: false,
 							generate: 'ssr',
 							hydratable: true,

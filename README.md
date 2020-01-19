@@ -1,7 +1,6 @@
 # sapper-template
 
-The default template for setting up a [Sapper](https://github.com/sveltejs/sapper) project. Can use either Rollup or webpack as bundler.
-
+This is a fork of Sapper's project template to enable usage of Tailwindcss. Refer to [Sapper](https://github.com/sveltejs/sapper) for more info.
 
 ## Getting started
 
@@ -11,13 +10,13 @@ The default template for setting up a [Sapper](https://github.com/sveltejs/sappe
 To create a new Sapper project based on Rollup locally, run
 
 ```bash
-npx degit "sveltejs/sapper-template#rollup" my-app
+npx degit "sarioglu/sapper-tailwindcss-template#rollup" my-app
 ```
 
 For a webpack-based project, instead run
 
 ```bash
-npx degit "sveltejs/sapper-template#webpack" my-app
+npx degit "sarioglu/sapper-tailwindcss-template#webpack" my-app
 ```
 
 [`degit`](https://github.com/Rich-Harris/degit) is a scaffolding tool that lets you create a directory from a branch in a repository.
